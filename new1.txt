@@ -1,0 +1,74 @@
+Hello!
+After creating local file:
+khushbuhasija gitpracs >> git add --all
+khushbuhasija gitpracs >> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   new1.txt
+
+khushbuhasija gitpracs >> git commit -m "Add new1.txt"
+[master (root-commit) c3f2d3e] Add new1.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 new1.txt
+khushbuhasija gitpracs >> 
+
+
+
+
+If a file is modified and then pushed to global repo:
+khushbuhasija hello-world >> git add .
+
+khushbuhasija hello-world >> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   index.html
+
+khushbuhasija hello-world >> git commit -m "Updated index.html"
+[master 4861326] Updated index.html
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+khushbuhasija hello-world >> git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 284 bytes | 284.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/khushbu-hasija/hello-world.git
+   1b1cfb0..4861326  master -> master
+
+
+To add SSH key:
+khushbuhasija gitpracs >> ssh-keygen -t rsa -b 4096 -C "hasijakhushbu@example.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/khushbuhasija/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /Users/khushbuhasija/.ssh/id_rsa.
+Your public key has been saved in /Users/khushbuhasija/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:9hWwXTK1cuMqd6qK220ZLai4bAYE/HhSyP/2HPKRi5o hasijakhushbu@example.com
+The key's randomart image is:
++---[RSA 4096]----+
+|o .       . o.o  |
+|.+ .       + + . |
+| .=       . + +  |
+| o.+         = . |
+| .o .   S. .. .  |
+|  .  + =..o...   |
+|   ...*.+ o+o .  |
+|   .=..B .oo o   |
+|   E+.o.ooo..    |
++----[SHA256]-----+
+
+
+khushbuhasija gitpracs >> cat ~/.ssh/id_rsa.pub
+
+Copy paste this into SSH keys in your github profile
